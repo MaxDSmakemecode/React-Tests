@@ -3,6 +3,7 @@ import './App.css';
 import MyFirstComponent from './components/myFirstComponent';
 import ParentComponent from './components/parentComponent.jsx';
 
+// Firt comment in development branch for git
 function App() {
   return (
     <div className="App">
