@@ -18,7 +18,9 @@ class ParentComponent extends Component {
                     <h3><ChildComponent text="I'm the 2nd child."/></h3>
                     <h3><ChildComponent text="I'm the 3rd child."/></h3>
                     <br/><br/>
-                    <h3><PersonComponent age={30} /></h3>
+                    <h3>
+                    <PersonComponent age={30} />
+                    </h3>
                 </div>
         );
     }
