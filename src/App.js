@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import MyFirstComponent from './components/myFirstComponent';
 import ParentComponent from './components/parentComponent.jsx';
+import ImgSlider from './components/img-slider/imgSlider'
 
 // Firt comment in development branch for git
 class App extends React.Component {
@@ -10,7 +11,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            scroll down for fun
           </p>
           <a
             className="App-link"
@@ -20,9 +21,12 @@ class App extends React.Component {
           >
             Learn React
           </a>
+        </header>
+        <main>
           <MyFirstComponent />
           <ParentComponent />
-        </header>
+          <ImgSlider />
+        </main>
       </div>
     );
   }
