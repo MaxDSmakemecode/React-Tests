@@ -21,10 +21,10 @@ class App extends React.Component {
           >
             Learn React
           </a>
-        </header>
-        <main>
           <MyFirstComponent />
           <ParentComponent />
+        </header>
+        <main>
           <ImgSlider />
         </main>
       </div>
