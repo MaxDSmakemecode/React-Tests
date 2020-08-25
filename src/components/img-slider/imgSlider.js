@@ -14,10 +14,9 @@ const SliderWrapper = styled.div`
 const Slider = styled.div`
     position: relative;
     width: 100%;
-    padding-bottom: 65.3%;
 `
 
-const Slide = styled.figure`
+const SingleSlide = styled.figure`
     display: none; 
 `
 
@@ -93,6 +92,19 @@ const Prev = styled(Next)`
     }
 `
 
+// slider logic
+    /* 
+    1. get all the slide elements and save them in a variable
+    2. set a counter outside of the sliding animation function so the active class has a reference
+    3. write a for loop to set every slide to 'display: none' everytime the slider gets updated via setTimeout
+    4. in the loop the counter has to be incremented
+    5. when the sliding animation is at the end the counter has to return to zero 
+    6. to start the whole slider animation there has to be another setTimeout outside of the sliding animation function
+    */
+
+const slides = document.getElementsByTagName('figure')
+console.log(slides)
+
 class ImgSlider extends React.Component {
     render(){
         return(
@@ -100,21 +112,21 @@ class ImgSlider extends React.Component {
                 <h1>image slider</h1>
                 <SliderWrapper>
                     <Slider>
-                        <Slide>
+                        <SingleSlide>
                             <img src={slider1} alt="Lion" />
                             <SlideCaption>Lion</SlideCaption>
-                        </Slide>
-                        <Slide>
+                        </SingleSlide>
+                        <SingleSlide>
                             <img src={slider2} alt="Beaver" />
                             <SlideCaption>Beaver</SlideCaption>
-                        </Slide>
-                        <Slide>
+                        </SingleSlide>
+                        <SingleSlide>
                             <img src={slider3} alt="Wolf" />
                             <SlideCaption>Wolf</SlideCaption>
-                        </Slide>
+                        </SingleSlide>
                     </Slider>
                     <Controls>
-                        <Prev></Prev>
+                        <Prev onClick={this.clickLog}></Prev>
                         <Next></Next>
                     </Controls>
                 </SliderWrapper>
