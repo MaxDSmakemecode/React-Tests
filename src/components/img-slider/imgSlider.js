@@ -29,7 +29,7 @@ const sliding = keyframes`
     }
 `
 
-const SlideAnimation = styled.figure`
+const SlideActive = styled.figure`
     display: block;
     position: absolute;
     animation: ${sliding} 500ms;
@@ -102,8 +102,24 @@ const Prev = styled(Next)`
     6. to start the whole slider animation there has to be another setTimeout outside of the sliding animation function
     */
 
+const slideInterval = 1000
 const slides = document.getElementsByTagName('figure')
-console.log(slides)
+let counter = 0
+
+function sliderAnimation(){
+    for(let i = 0; i < slides.length; i++){
+        slides[i].setAttribute('display', 'none')
+        counter++
+    }
+    if(counter >= slides.length){
+        counter = 0;
+    }
+    // slides[counter - 1].classList.add()
+
+    setTimeout(sliderAnimation, slideInterval)
+}
+
+setTimeout(sliderAnimation, slideInterval)
 
 class ImgSlider extends React.Component {
     render(){
