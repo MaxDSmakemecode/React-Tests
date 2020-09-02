@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
+import './css/todolist.css';
 import MyFirstComponent from './components/myFirstComponent';
 import ParentComponent from './components/parentComponent.jsx';
 import ImgSlider from './components/img-slider/imgSlider'
+import TodoList from './components/todolist/TodoList'
 
 // Firt comment in development branch for git
 class App extends React.Component {
@@ -26,6 +28,7 @@ class App extends React.Component {
         </header>
         <main>
           <ImgSlider />
+          <TodoList />
         </main>
       </div>
     );
